@@ -2,9 +2,11 @@ body {
   width: 100%;
   background-image: url("http://www.freeppt.net/background/hamburger-ppt-background-powerpoint.jpg");
   font-family: 'Roboto', sans-serif;
+  font-size: 14pt;
 }
 
 h2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 22pt;
+  font-size: 20pt;
 }
+ 

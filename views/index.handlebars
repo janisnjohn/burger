@@ -10,26 +10,27 @@
     <div class="uneaten">
       {{#each burgers}}
         {{#unless this.devoured}}
+            <form class="input-group" action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+        
             <ol>
-              {{this.id}}   {{this.burger_name}}
+              {{this.id}}.   {{this.burger_name}}
             </ol>
-            <form class="form-inline" action="burgers/update/{{this.id}}?_method=PUT" method="POST">
-              <input type="hidden" name="devoured" value="true">
-              <button type="submit" class="btn btn-default" style="background-color:orange; color:yellow;">Devour It!</button>
+              <input class="form-control" type="hidden" name="devoured" value="true">
+              <span class="input-group-btn">
+              <button type="submit" class="btn btn-default" style="background-color:orange; color:yellow; margin-right: 200px;">Devour It!</button>
+            </span>
             </form>
         {{/unless}}
       {{/each}}
     </div>
 </div>
-
   <div class="col-md-6" id="eaten">
-      <br><br><br>
-      <h2 class="eaten-title">Eaten Burgers</h2>
+    <h2 class="eaten-title">Eaten Burgers</h2>
       <div class="burgers-eaten">
         {{#each burgers}}
           {{#if this.devoured}}
             <ol>
-               {{this.id}}   {{this.burger_name}}
+               {{this.id}}.   {{this.burger_name}}
             </ol>
             <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
              <input type="hidden" name="devoured" value="false">
@@ -47,11 +48,13 @@
       <br><br><br>
         <form class="create-update-form" action="burgers/create" method="POST">
           <h2 class="add-title">Add a Burger</h2>
-          <div class="form-group">
-            <label for="newBurger">Burger Name:</label>
+          <div class="input-group">
+            <label for="newBurger">Burger Name</label><br>
             <input type="hidden" name="devoured" value="0">
-            <input type="text" id="newBurger" name="name">
-          <button type="submit" class="btn btn-default" style="background-color:orange; color:yellow;">Add Burger</button>
+            <input type="text" class="form-control" id="newBurger" name="name">
+          <button type="submit" class="btn btn-default" style="background-color:orange; color:yellow; margin-left: 130px;">Add Burger</button>
+          <br>
+          <br>
         </form>
       </div>
 </div>
