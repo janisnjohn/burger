@@ -10,7 +10,7 @@ var connection;
 //   port: 3306,
 //   host: "localhost",
 //   user: "root",
-//   password: "Artesia1!",
+//   password: "",
 //   database: "burgers_db"
 // });
 if (process.env.JAWSDB_URL) {
@@ -19,7 +19,7 @@ if (process.env.JAWSDB_URL) {
   connection= mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'Artesia1!',
+    password: '',
     database:'burgers_db'
   });
 
