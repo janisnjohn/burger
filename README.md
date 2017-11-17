@@ -1,4 +1,5 @@
-#Eat-Da-burger
+# Eat-Da-burger
+
 **This app is a burger logger that uses MySQL, Node, Express, Handlebards and ORM.  I used MVC design pattern and used Node and MySQL to query and route data and then used Handlebards to generate the HTML.**
 
 - Eat-Da-Burger is a restaurant app that lets users input the names of the burgers they'd like to eat.
